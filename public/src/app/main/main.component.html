@@ -1,0 +1,44 @@
+<div style="text-align:center">
+  <div class="main-content">
+    <div class="recipe-search-box">
+        <!-- <h3>Create a New Recipe</h3> -->
+        <p class = "error" *ngFor="let e of errors">{{e}}</p>
+      
+        <form (submit) = "createRecipe()" >
+          <!-- {{ newRecipe | json }} -->
+          <p>First Ingredient <input type = "text" name = "newRecipe.firstIngredient" [(ngModel)] = "newRecipe.firstIngredient"></p>
+          <p>Second Ingredient  <input type = "text" name = "newRecipe.secondIngredient" [(ngModel)] = "newRecipe.secondIngredient"></p>
+          <input type = "submit" value = "Search for a Recipe!" class="button">
+        </form>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class = "popular" >
+  <h2>Most Popular Recipes</h2>
+  <div class="fav-recipes-row">
+    <div class="single-recipe" *ngFor="let oneR of oneRecipe">
+      <div>
+        <img src={{oneR.image}} [routerLink]="['/recipes/', oneR.id]" alt="product-image">
+        <label>
+          {{oneR.title}}
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class = "about">
+  <h2>Inspiration</h2>
+  <p>One of my hobbies is cooking.  There are days when I would look in the fridge, wanting to cook something new. Looking at a cookbook was inspiring, however, it required too many ingredients I know I would only use once. This project is inspired by ny desire to maximize the ingredients in my pantry. I hope it will help you too. </p>
+</div>
+
+<div class = "footer">
+  <p class="footerp"><a href="https://www.annachang.dev">Portfolio</a></p>
+  <p class="footerp"><a href="https://www.github.com/annachang30">Github</a></p>
+  <p class="footerp"><a href="https://www.linkedin.com/in/anna-chang-ab661457/">LinkedIn</a></p>
+</div>
+

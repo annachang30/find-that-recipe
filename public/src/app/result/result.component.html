@@ -1,0 +1,120 @@
+
+<div class = "root">
+  <!-- <button [routerLink]="['/recipes/new']">Create New Recipe</button> -->
+  <div *ngIf="resultRecipe">
+  <!-- <div class="result-recipes-row">
+    <div class="list-recipe" *ngFor="let result of resultRecipe">
+      <div>
+        <p>
+          {{result.title}}
+        </label>
+        <img src={{result.image}} [routerLink]="['/recipes/', result.id]" alt="product-image">
+      </div>
+    </div>
+    <button class="showbutton" (click)="showMoreClick()">Show more recipes!</button>
+      <div class="list-recipe" *ngFor="let result of moreRecipe">
+        <div>
+          <label>
+            {{result.title}}
+          </label>
+          <img src={{result.image}} [routerLink]="['/recipes/', result.id]" alt="product-image">
+        </div>
+      </div>
+  </div> -->
+
+
+  <div class="result-recipes">
+    <div class="result-row">
+      <div class="single-result">
+        <img src={{resultRecipe[0].image}} [routerLink]="['/recipes/', resultRecipe[0].id]" alt="product-image">
+        <p>
+          {{resultRecipe[0].title}}
+        </p>
+      </div>
+      <div class="single-result">
+        <img src={{resultRecipe[1].image}} [routerLink]="['/recipes/', resultRecipe[1].id]" alt="product-image">
+        <p>
+          {{resultRecipe[1].title}}
+        </p>
+      </div>
+      <div class="single-result">
+        <img src={{resultRecipe[2].image}} [routerLink]="['/recipes/', resultRecipe[2].id]" alt="product-image">
+        <p>
+          {{resultRecipe[2].title}}
+        </p>
+      </div>
+    </div>
+    <div class="result-row">
+      <div class="single-result">
+          <img src={{resultRecipe[3].image}} [routerLink]="['/recipes/', resultRecipe[3].id]" alt="product-image">
+          <p>
+            {{resultRecipe[3].title}}
+          </p>
+        </div>
+        <div class="single-result">
+          <img src={{resultRecipe[4].image}} [routerLink]="['/recipes/', resultRecipe[4].id]" alt="product-image">
+          <p>
+            {{resultRecipe[4].title}}
+          </p>
+        </div>
+        <div class="single-result">
+          <img src={{resultRecipe[5].image}} [routerLink]="['/recipes/', resultRecipe[5].id]" alt="product-image">
+          <p>
+            {{resultRecipe[5].title}}
+          </p>
+        </div>
+    </div>
+    <div *ngIf="visible">
+      <button class="showbutton" (click)="showMoreClick()">Show more recipes!</button>
+    </div>
+    <div *ngIf="moreRecipe">
+    <div class="result-row">
+      <div class="single-result">
+        <img src={{moreRecipe[6].image}} [routerLink]="['/recipes/', moreRecipe[6].id]" alt="product-image">
+        <p>
+          {{moreRecipe[6].title}}
+        </p>
+      </div>
+      <div class="single-result">
+        <img src={{moreRecipe[7].image}} [routerLink]="['/recipes/', moreRecipe[7].id]" alt="product-image">
+        <p>
+          {{moreRecipe[7].title}}
+        </p>
+      </div>
+      <div class="single-result">
+        <img src={{moreRecipe[8].image}} [routerLink]="['/recipes/', moreRecipe[8].id]" alt="product-image">
+        <p>
+          {{moreRecipe[8].title}}
+        </p>
+      </div>
+    </div>
+    <div class="result-row">
+        <div class="single-result">
+          <img src={{moreRecipe[9].image}} [routerLink]="['/recipes/', moreRecipe[9].id]" alt="product-image">
+          <p>
+            {{moreRecipe[9].title}}
+          </p>
+        </div>
+        <div class="single-result">
+          <img src={{moreRecipe[10].image}} [routerLink]="['/recipes/', moreRecipe[10].id]" alt="product-image">
+          <p>
+            {{moreRecipe[10].title}}
+          </p>
+        </div>
+        <div class="single-result">
+          <img src={{moreRecipe[11].image}} [routerLink]="['/recipes/', moreRecipe[11].id]" alt="product-image">
+          <p>
+            {{moreRecipe[11].title}}
+          </p>
+        </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class = "footer">
+    <p class="footerp"><a href="https://www.annachang.dev">Portfolio</a></p>
+    <p class="footerp"><a href="https://www.github.com/annachang30">Github</a></p>
+    <p class="footerp"><a href="https://www.linkedin.com/in/anna-chang-ab661457/">LinkedIn</a></p>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+*{
+    font-family: fantasy;
+    text-align: center;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/assets/images/result.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+.result-row{
+    display: flex;
+    margin-left: 25%;
+}
+img{
+    border-radius: 90px;
+    width: 80%;
+    height: 200px;
+    margin-top: 15px;
+}
+.showbutton{
+    margin-top:30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.single-result{
+    width:20%;
+    margin: 1%;
+}
+.footer{
+    padding: 20px;
+    height: 40px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    display: flex;
+    padding-left: 42%;
+    background-color: #80808026;
+    padding-top: 0px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.footerp{
+    margin-right: 10px;
+}

@@ -1,0 +1,9 @@
+<h3>Create a New Recipe</h3>
+<p class = "error" *ngFor="let e of errors">{{e}}</p>
+<form (submit) = "createRecipe()">
+  {{ newRecipe | json }}
+  <p>First Ingredient <input type = "text" name = "newRecipe.firstIngredient" [(ngModel)] = "newRecipe.firstIngredient"></p>
+  <p>Second Ingredient  <input type = "text" name = "newRecipe.secondIngredient" [(ngModel)] = "newRecipe.secondIngredient"></p>
+  <input type = "submit" value = "Create a Recipe">
+</form>
+<button [routerLink]="['/recipes']">Cancel</button>

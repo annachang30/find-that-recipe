@@ -1,0 +1,58 @@
+<div class ="container">
+  <div *ngIf="recipe">
+    <div class="main-content">
+      <img src="{{recipe.image}}" alt="recipe-image">
+      <div class="main-body-content">
+        <div class="top-content">
+          <h1>{{ recipe.title }}</h1>
+          <p><span class="top-header">Servings: </span> {{recipe.servings}}</p>
+          <!-- <p><span class="top-header">Price Per Service: </span>{{recipe.pricePerServing | currency:'USD':'symbol':'1.2-2'}}</p> -->
+          <p><span class="top-header">Ready In Minutes: </span>{{ recipe.readyInMinutes }} Minutes</p>
+        </div>
+        <div class="main-middle-content">
+          <div class="ingredients">
+            <p><span class="header">Ingredients: </span></p>
+            <div class="ingredients-body">
+              <div *ngFor = "let i of recipe.extendedIngredients">
+                <p>{{i.amount}} {{i.unit}} of {{ i.name }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="instructions">
+            <p><span class="header">Instructions: </span></p>
+            <div class="instruction-body">
+              <div *ngFor = "let i of recipe.analyzedInstructions[0].steps">
+                <p> <span class="top-header">Step {{i.number}}:</span> {{ i.step }}</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+  <div class="bottom-content">
+    <h1 class="bottom-header"> Discover more similar recipes</h1>
+    <div class="similar-recipes-row">
+      <div class = "single-similar-recipe">
+        <img src="https://spoonacular.com/recipeImages/{{similarRecipe[0].image}}" [routerLink]="['/recipes/', similarRecipe[0].id]" alt="similar-image" class="similar-img">
+        <div class="single-similar-title">{{similarRecipe[0].title}} </div>
+      </div>
+      <div class = "single-similar-recipe">
+        <img src="https://spoonacular.com/recipeImages/{{similarRecipe[1].image}}" [routerLink]="['/recipes/', similarRecipe[1].id]" alt="similar-image" class="similar-img">
+        <div class="single-similar-title">{{similarRecipe[1].title}} </div>
+      </div>
+      <div class = "single-similar-recipe">
+        <img src="https://spoonacular.com/recipeImages/{{similarRecipe[2].image}}" [routerLink]="['/recipes/', similarRecipe[2].id]" alt="similar-image" class="similar-img">
+        <div class="single-similar-title">{{similarRecipe[3].title}} </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class = "footer">
+    <p class="footerp"><a href="https://www.annachang.dev">Portfolio</a></p>
+    <p class="footerp"><a href="https://www.github.com/annachang30">Github</a></p>
+    <p class="footerp"><a href="https://www.linkedin.com/in/anna-chang-ab661457/">LinkedIn</a></p>
+  </div>
+</div>
